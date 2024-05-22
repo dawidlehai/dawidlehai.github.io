@@ -1,8 +1,17 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-family: "JetBrains Mono", monospace;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: monospace;
+  font-family: "JetBrains Mono", monospace;
 }
