@@ -23,8 +23,5 @@ html {
 body {
   font-weight: 400;
   font-size: 1.6rem;
-  font-family: monospace;
-}
-.fonts-loaded body {
   font-family: "JetBrains Mono", monospace;
 }
