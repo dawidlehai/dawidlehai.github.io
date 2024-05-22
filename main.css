@@ -1,7 +1,16 @@
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 800;
+  src: url("/fonts/JetBrainsMono[wght].woff2") format("woff2");
+  font-family: "JetBrains Mono", monospace;
+  font-display: swap;
+  font-optical-sizing: auto;
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 100 800;
+  src: url("/fonts/JetBrainsMono-Italic[wght].woff2") format("woff2");
   font-family: "JetBrains Mono", monospace;
   font-display: swap;
   font-optical-sizing: auto;
@@ -12,6 +21,7 @@ html {
 }
 
 body {
+  font-weight: 400;
   font-size: 1.6rem;
   font-family: "JetBrains Mono", monospace;
 }
