@@ -17,25 +17,62 @@
 }
 
 :root {
-  --color-text: black;
   --color-bg: white;
-  --color-link: rgb(188, 38, 108);
+  --color-link: deeppink;
+  --color-text: black;
+
+  @media (prefers-color-scheme: dark) {
+    --color-bg: black;
+    --color-text: white;
+  }
 }
 
 html {
-  background-color: var(--color-bg);
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  margin-inline: auto;
-  max-width: 60ch;
+  margin-inline-start: 50%;
+  background-color: var(--color-bg);
   color: var(--color-text);
   font-weight: 400;
   font-size: 1.6rem;
   font-family: "JetBrains Mono", monospace;
 }
 
-a:is(:link, :visited) {
+p {
+  line-height: 1.5;
+}
+
+a:is(:link, :visited, :hover, :active) {
   color: var(--color-link);
+}
+
+ul {
+  list-style: none;
+}
+
+.reading-width {
+  max-width: 60ch;
+}
+
+/* ----------------------------------- */
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skills--block {
+}
+
+.skills__list {
+  padding: 0;
 }
