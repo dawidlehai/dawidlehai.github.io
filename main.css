@@ -16,20 +16,26 @@
   font-optical-sizing: auto;
 }
 
+:root {
+  --color-text: black;
+  --color-bg: white;
+  --color-link: rgb(188, 38, 108);
+}
+
 html {
-  /* background-color: black; */
+  background-color: var(--color-bg);
   font-size: 62.5%;
 }
 
 body {
   margin-inline: auto;
   max-width: 60ch;
-  /* color: grey; */
+  color: var(--color-text);
   font-weight: 400;
   font-size: 1.6rem;
   font-family: "JetBrains Mono", monospace;
 }
 
 a:is(:link, :visited) {
-  /* color: lightskyblue; */
+  color: var(--color-link);
 }
