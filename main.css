@@ -115,3 +115,20 @@ ul {
   padding: 1.2rem 1.6rem;
   width: fit-content;
 }
+
+/* ----------------------------------- */
+
+.certifications {
+  padding: 0;
+  padding-right: 3.2rem;
+}
+
+.certifications__comma {
+  display: none;
+}
+
+/* ----------------------------------- */
+
+.experience__duration {
+  font-style: italic;
+}
