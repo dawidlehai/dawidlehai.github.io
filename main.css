@@ -48,8 +48,46 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+.h1 {
+  font-size: 5.375rem;
+  line-height: 1.125;
+  letter-spacing: -0.02em;
+}
+
+.h2 {
+  font-size: 4.479rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.h3 {
+  font-size: 3.732rem;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+
+.h4 {
+  font-size: 3.11rem;
+  line-height: 1.25;
+}
+
+.h5 {
+  font-size: 2.592rem;
+  line-height: 1.25;
+}
+
+.h6 {
+  font-size: 2.16rem;
+  line-height: 1.25;
+}
+
+.small {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 p {
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 a:is(:link, :visited, :hover, :active) {
@@ -61,74 +99,9 @@ ul {
 }
 
 .reading-width {
-  max-width: 60ch;
+  max-width: 66ch;
 }
 
 .read-more {
   text-align: right;
-}
-
-/* ----------------------------------- */
-
-.section {
-  margin-top: 4rem;
-  /* border-top: 1px dotted var(--color-text); */
-}
-
-.section-heading {
-  margin-top: 9.6rem;
-  font-size: 5.375rem;
-  line-height: 1.15;
-}
-
-/* ----------------------------------- */
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-}
-
-.skills__list {
-  padding: 0;
-}
-
-/* ----------------------------------- */
-
-.project {
-  margin-top: 7.2rem;
-}
-
-.project__heading {
-  margin-bottom: 0;
-  font-size: 3.732rem;
-  line-height: 1.15;
-}
-
-.project__info {
-  font-style: italic;
-}
-
-.project__stack {
-  border: 1px solid #ddd;
-  border-radius: 0.8rem;
-  background: #f6f6f6;
-  padding: 1.2rem 1.6rem;
-  width: fit-content;
-}
-
-/* ----------------------------------- */
-
-.certifications {
-  padding: 0;
-  padding-right: 3.2rem;
-}
-
-.certifications__comma {
-  display: none;
-}
-
-/* ----------------------------------- */
-
-.experience__duration {
-  font-style: italic;
 }
