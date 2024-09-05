@@ -48,35 +48,35 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
-.h1 {
+.heading-1 {
   font-size: 5.375rem;
   line-height: 1.125;
   letter-spacing: -0.02em;
 }
 
-.h2 {
+.heading-2 {
   font-size: 4.479rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
-.h3 {
+.heading-3 {
   font-size: 3.732rem;
   line-height: 1.25;
   letter-spacing: -0.005em;
 }
 
-.h4 {
+.heading-4 {
   font-size: 3.11rem;
   line-height: 1.25;
 }
 
-.h5 {
+.heading-5 {
   font-size: 2.592rem;
   line-height: 1.25;
 }
 
-.h6 {
+.heading-6 {
   font-size: 2.16rem;
   line-height: 1.25;
 }
@@ -87,6 +87,8 @@ body {
 }
 
 p {
+  margin-block-start: 2em;
+  margin-block-end: 2em;
   line-height: 1.5;
 }
 
@@ -99,7 +101,7 @@ ul {
 }
 
 .reading-width {
-  max-width: 66ch;
+  max-width: 60ch;
 }
 
 .read-more {
