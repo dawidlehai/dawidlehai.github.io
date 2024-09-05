@@ -55,6 +55,7 @@ p {
 }
 
 .title {
+  margin-block-start: 24rem;
   margin-block-end: -1.6rem;
   font-weight: 700;
   font-size: 5.375rem;
@@ -104,6 +105,10 @@ p {
   font-style: italic;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 a:is(:link, :visited, :hover, :active) {
   color: var(--color-link);
 }
@@ -134,4 +139,16 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   gap: 1.5em;
   margin-block-end: 4.8rem;
+}
+
+.list-item {
+  position: relative;
+  margin-block-start: 0;
+  margin-block-end: -1px;
+  border-block: 1px solid #ccc;
+  padding-block: 1em;
+}
+
+.space-before {
+  margin-block-start: 4.8rem;
 }
