@@ -48,47 +48,50 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
-.heading-1 {
+.title {
+  margin-block-end: -1.6rem;
   font-size: 5.375rem;
   line-height: 1.125;
   letter-spacing: -0.02em;
 }
 
-.heading-2 {
+.section-heading {
+  margin-block-start: 12.8rem;
+  margin-block-end: 3.2rem;
   font-size: 4.479rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
-.heading-3 {
-  font-size: 3.732rem;
-  line-height: 1.25;
-  letter-spacing: -0.005em;
-}
-
-.heading-4 {
-  font-size: 3.11rem;
-  line-height: 1.25;
-}
-
-.heading-5 {
+.subheading {
+  margin-block-start: 7.2rem;
+  margin-block-end: 3.2rem;
   font-size: 2.592rem;
   line-height: 1.25;
 }
 
-.heading-6 {
+.subsection-heading {
+  margin-block-start: 9.6rem;
+  margin-block-end: 3.2rem;
+  font-size: 3.11rem;
+  line-height: 1.25;
+}
+
+.small-heading {
+  margin-block-start: 3.2rem;
+  margin-block-end: -0.8rem;
   font-size: 2.16rem;
   line-height: 1.25;
 }
 
-.small {
+.small-text {
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
 p {
-  margin-block-start: 2em;
-  margin-block-end: 2em;
+  margin-block-start: 1.5em;
+  margin-block-end: 1.5em;
   line-height: 1.5;
 }
 
@@ -108,6 +111,13 @@ ul {
   max-width: 60ch;
 }
 
-.read-more {
+.text-right {
   text-align: right;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  gap: 1.5em;
+  margin-block-end: 4.8rem;
 }
