@@ -49,9 +49,18 @@ body {
 }
 
 p {
+  text-wrap: pretty;
   margin-block-start: 1.5em;
   margin-block-end: 1.5em;
   line-height: 1.5;
+}
+
+.title,
+.section-heading,
+.subheading,
+.subsection-heading,
+.small-heading {
+  text-wrap: balance;
 }
 
 .title {
@@ -119,15 +128,11 @@ ul {
 }
 
 .reading-width {
-  max-width: 60ch;
+  max-inline-size: 60ch;
 }
 
-.heading-width {
-  max-width: 30ch;
-}
-
-.heading-width--small {
-  max-width: 28ch;
+.balance {
+  text-wrap: balance;
 }
 
 .text-right {
