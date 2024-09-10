@@ -135,10 +135,6 @@ ul {
   text-wrap: balance;
 }
 
-.text-right {
-  text-align: right;
-}
-
 .auto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
