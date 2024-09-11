@@ -46,6 +46,7 @@ body {
   font-weight: 400;
   font-size: 1.8rem;
   font-family: "JetBrains Mono", monospace;
+  overflow-wrap: break-word;
 }
 
 p {
@@ -160,4 +161,20 @@ ul {
 
 .space-before-big {
   margin-block-start: 16rem;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-block-start: 1.5em;
+  margin-block-end: 1.5em;
+  line-height: 1.5;
+
+  & > li {
+    border-radius: 0.5em;
+    background-color: #eee;
+    padding-inline: 0.75em;
+    padding-block: 0.5em;
+  }
 }
