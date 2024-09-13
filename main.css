@@ -24,7 +24,9 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 50%;
+  /* font-size: 62.5%; */
+  /* font-size: 56.25%; */
 }
 
 *,
@@ -39,25 +41,25 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "JetBrains Mono", monospace;
   overflow-wrap: break-word;
-}
-
-p {
-  text-wrap: pretty;
-  margin-block-start: 1.5em;
-  margin-block-end: 1.5em;
-  line-height: 1.5;
-}
-
-a:is(:link, :visited, :hover, :active) {
-  color: var(--color-link);
 }
 
 ul {
   padding-inline-start: 0;
   list-style: none;
+}
+
+p {
+  text-wrap: pretty;
+  margin-inline: 0.75em;
+  margin-block: 1.5em;
+  line-height: 1.5;
+}
+
+a:is(:link, :visited, :hover, :active) {
+  color: var(--color-link);
 }
 
 .title,
@@ -66,6 +68,7 @@ ul {
 .subsection-heading,
 .small-heading {
   text-wrap: balance;
+  margin-inline: 1.5rem;
 }
 
 .title {
