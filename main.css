@@ -18,6 +18,7 @@
 
 :root {
   --color-bg: white;
+  --color-bg-accent: #eee;
   --color-fg: #ccc;
   --color-link: deeppink;
   --color-text: #222;
@@ -85,7 +86,8 @@ p,
 .section-heading,
 .subheading,
 .subsection-heading,
-.small-heading {
+.small-heading,
+.subsection-subheading {
   margin-inline: var(--size-inline);
   max-inline-size: 62.5rem;
 }
@@ -93,13 +95,15 @@ p,
 .section-heading,
 .subheading,
 .subsection-heading,
-.small-heading {
+.small-heading,
+.subsection-subheading {
   text-wrap: balance;
 }
 
 .section-heading,
 .subheading,
-.subsection-heading {
+.subsection-heading,
+.subsection-subheading {
   margin-block-end: var(--size-block);
 }
 
@@ -126,16 +130,29 @@ p,
 }
 
 .subheading {
-  margin-block-start: var(--size-p-3);
+  margin-block-start: var(--size-p-5);
+  margin-block-end: var(--size-n-2);
   font-weight: 400;
   font-size: 2.88rem;
   line-height: 1.25;
 }
 
+.subheading.first {
+  margin-block-start: var(--size-block);
+  margin-block-end: var(--size-block);
+}
+
 .subsection-heading {
   margin-block-start: var(--size-p-4);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 3.456rem;
+  line-height: 1.25;
+}
+
+.subsection-subheading {
+  margin-block-start: var(--size-p-3);
+  font-weight: 400;
+  font-size: 2.88rem;
   line-height: 1.25;
 }
 
@@ -189,6 +206,12 @@ p,
 }
 
 /* Utilities */
+
+.aside {
+  border-block: 1px solid var(--color-fg);
+  padding-block: 0.5em;
+  font-size: 1.667rem;
+}
 
 .italic {
   font-style: italic;
