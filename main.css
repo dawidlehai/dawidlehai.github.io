@@ -18,7 +18,7 @@
 
 :root {
   --color-bg: white;
-  --color-fg: grey;
+  --color-fg: #ccc;
   --color-link: deeppink;
   --color-text: #222;
 
@@ -28,6 +28,10 @@
 
   --size-n-2: calc(var(--size-block) / -2);
   --size-n-3: calc(var(--size-block) / -3);
+
+  --size-d-2: calc(var(--size-block) / 2);
+  --size-d-3: calc(var(--size-block) / 3);
+  --size-d-4: calc(var(--size-block) / 4);
 
   --size-p-3: calc(var(--size-block) * 3);
   --size-p-4: calc(var(--size-block) * 4);
@@ -114,7 +118,7 @@ p,
 }
 
 .section-heading {
-  margin-block-start: var(--size-p-4);
+  margin-block-start: var(--size-p-5);
   font-weight: 500;
   font-size: 4.977rem;
   line-height: 1.2;
@@ -129,7 +133,7 @@ p,
 }
 
 .subsection-heading {
-  margin-block-start: var(--size-p-3);
+  margin-block-start: var(--size-p-4);
   font-weight: 700;
   font-size: 3.456rem;
   line-height: 1.25;
@@ -142,6 +146,49 @@ p,
   font-size: 2.4rem;
   line-height: 1.25;
 }
+
+/* Stack list */
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--size-d-3);
+  margin-inline: var(--size-inline);
+}
+
+.stack__item {
+  border: 1px solid var(--color-fg);
+  border-radius: var(--size-d-3);
+  padding: var(--size-d-2);
+  line-height: 1;
+}
+
+.stack::after {
+  flex-grow: 1;
+  margin-inline-start: var(--size-n-3);
+  margin-inline-end: calc(var(--size-inline) * -1);
+  border-block-end: 1px solid var(--color-fg);
+  content: "";
+}
+
+/* Creations list */
+
+.creation-type {
+  display: flex;
+  align-items: center;
+  gap: var(--size-inline);
+  font-style: italic;
+}
+
+.creation-type::after {
+  flex-grow: 1;
+  margin-inline-end: calc(var(--size-inline) * -1);
+  border-block-end: 1px solid var(--color-fg);
+  content: "";
+}
+
+/* Utilities */
 
 .italic {
   font-style: italic;
