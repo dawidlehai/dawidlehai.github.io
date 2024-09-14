@@ -18,15 +18,16 @@
 
 :root {
   --color-bg: white;
+  --color-fg: grey;
   --color-link: deeppink;
   --color-text: #222;
 }
 
 html {
   box-sizing: border-box;
-  font-size: 50%;
   /* font-size: 62.5%; */
   /* font-size: 56.25%; */
+  font-size: 50%;
 }
 
 *,
@@ -36,8 +37,7 @@ html {
 }
 
 body {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin-inline: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-weight: 400;
@@ -55,6 +55,7 @@ p {
   text-wrap: pretty;
   margin-inline: 0.75em;
   margin-block: 1.5em;
+  max-inline-size: 60ch;
   line-height: 1.5;
 }
 
@@ -75,7 +76,7 @@ a:is(:link, :visited, :hover, :active) {
   margin-block-start: 24rem;
   margin-block-end: -1.6rem;
   font-weight: 700;
-  font-size: 5.375rem;
+  font-size: 5.972rem;
   line-height: 1.125;
   letter-spacing: -0.02em;
 }
@@ -84,7 +85,7 @@ a:is(:link, :visited, :hover, :active) {
   margin-block-start: 16rem;
   margin-block-end: 3.2rem;
   font-weight: 600;
-  font-size: 4.479rem;
+  font-size: 4.977rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
@@ -93,7 +94,7 @@ a:is(:link, :visited, :hover, :active) {
   margin-block-start: 9.6rem;
   margin-block-end: 3.2rem;
   font-weight: 400;
-  font-size: 2.592rem;
+  font-size: 2.88rem;
   line-height: 1.25;
 }
 
@@ -101,7 +102,7 @@ a:is(:link, :visited, :hover, :active) {
   margin-block-start: 9.6rem;
   margin-block-end: 3.2rem;
   font-weight: 700;
-  font-size: 3.11rem;
+  font-size: 3.456rem;
   line-height: 1.25;
 }
 
@@ -109,7 +110,7 @@ a:is(:link, :visited, :hover, :active) {
   margin-block-start: 3.2rem;
   margin-block-end: -0.8rem;
   font-weight: 400;
-  font-size: 2.16rem;
+  font-size: 2.4rem;
   line-height: 1.25;
 }
 
