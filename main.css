@@ -1,17 +1,17 @@
 @font-face {
   font-style: normal;
-  font-weight: 100 800;
-  src: url("/fonts/JetBrainsMono[wght].woff2") format("woff2");
-  font-family: "JetBrains Mono";
+  font-weight: 100 900;
+  src: url("/fonts/Inter-VariableFont_opsz\,wght.woff2") format("woff2");
+  font-family: "Inter";
   font-display: swap;
   font-optical-sizing: auto;
 }
 
 @font-face {
   font-style: italic;
-  font-weight: 100 800;
-  src: url("/fonts/JetBrainsMono-Italic[wght].woff2") format("woff2");
-  font-family: "JetBrains Mono";
+  font-weight: 100 900;
+  src: url("/fonts/Inter-Italic-VariableFont_opsz\,wght.woff2") format("woff2");
+  font-family: "Inter";
   font-display: swap;
   font-optical-sizing: auto;
 }
@@ -26,8 +26,7 @@
 html {
   box-sizing: border-box;
   /* font-size: 62.5%; */
-  /* font-size: 56.25%; */
-  font-size: 50%;
+  font-size: 56.25%;
 }
 
 *,
@@ -42,7 +41,7 @@ body {
   color: var(--color-text);
   font-weight: 400;
   font-size: 2rem;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Inter", sans-serif;
   overflow-wrap: break-word;
 }
 
@@ -53,14 +52,27 @@ ul {
 
 p {
   text-wrap: pretty;
-  margin-inline: 0.75em;
-  margin-block: 1.5em;
-  max-inline-size: 60ch;
-  line-height: 1.5;
+  margin-block: 3rem;
+  line-height: 1.7;
+  font-family: "Inter", sans-serif;
 }
 
 a:is(:link, :visited, :hover, :active) {
   color: var(--color-link);
+}
+
+abbr {
+  text-decoration: none;
+}
+
+p,
+.title-container,
+.section-heading,
+.subheading,
+.subsection-heading,
+.small-heading {
+  margin-inline: 2rem;
+  max-inline-size: 72rem;
 }
 
 .title,
@@ -69,14 +81,18 @@ a:is(:link, :visited, :hover, :active) {
 .subsection-heading,
 .small-heading {
   text-wrap: balance;
-  margin-inline: 1.5rem;
+}
+
+.title-container {
+  container-type: inline-size;
 }
 
 .title {
-  margin-block-start: 24rem;
-  margin-block-end: -1.6rem;
+  container-type: inline-size;
+  margin-block-start: 15rem;
+  margin-block-end: -1.5rem;
   font-weight: 700;
-  font-size: 5.972rem;
+  font-size: clamp(4.977rem, 9cqi, 5.75rem);
   line-height: 1.125;
   letter-spacing: -0.02em;
 }
