@@ -223,6 +223,7 @@ p,
   align-items: center;
   gap: var(--size-d-3);
   margin-inline: var(--size-inline);
+  margin-block: calc(var(--size-block) * 1.15);
 }
 
 .stack__item {
@@ -287,6 +288,11 @@ p,
 }
 
 /* Utilities */
+
+.designed-by {
+  text-wrap: wrap;
+  margin-block-start: var(--size-n-2);
+}
 
 .aside {
   border: 1px solid var(--color-fg);
