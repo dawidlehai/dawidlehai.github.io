@@ -252,6 +252,7 @@ p,
   align-items: center;
   gap: var(--size-inline);
   font-style: italic;
+  font-weight: 300;
 }
 
 .creation-type::after {
@@ -264,6 +265,7 @@ p,
 /* Certificates list */
 
 .certificates__item {
+  text-wrap: balance;
   margin-inline-end: 0;
   padding-inline-end: var(--size-inline);
   overflow: hidden;
@@ -296,6 +298,11 @@ p,
 
 .italic {
   font-style: italic;
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 500;
 }
 
 .center {
