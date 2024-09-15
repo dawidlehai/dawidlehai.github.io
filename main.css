@@ -289,6 +289,15 @@ p,
 
 /* Utilities */
 
+.line-under {
+  margin-inline-end: 0;
+  margin-block-end: calc(var(--size-block) * 1.2);
+  border-block-end: 1px solid var(--color-fg);
+  padding-inline-end: var(--size-inline);
+  padding-block-end: var(--size-d-2);
+  max-inline-size: 100%;
+}
+
 .designed-by {
   text-wrap: wrap;
   margin-block-start: var(--size-n-2);
