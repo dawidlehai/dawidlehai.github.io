@@ -40,6 +40,7 @@
   --size-p-3: calc(var(--size-block) * 3);
   --size-p-4: calc(var(--size-block) * 4);
   --size-p-5: calc(var(--size-block) * 5);
+  --size-p-6: calc(var(--size-block) * 6);
 
   --bg-line-size: 0.3rem;
   --bg-line: repeating-linear-gradient(
@@ -64,8 +65,10 @@ html {
 }
 
 body {
-  margin-inline: 0;
+  margin-inline: auto;
+  border-inline-end: 1px solid var(--color-fg);
   background-color: var(--color-bg);
+  max-inline-size: 800px;
   color: var(--color-text);
   font-weight: 400;
   font-size: 2rem;
@@ -129,7 +132,7 @@ p,
 
 .title {
   container-type: inline-size;
-  margin-block-start: var(--size-p-5);
+  margin-block-start: var(--size-p-6);
   margin-block-end: var(--size-n-2);
   font-weight: 600;
   line-height: 1.125;
@@ -142,7 +145,7 @@ p,
 }
 
 .section-heading {
-  margin-block-start: var(--size-p-5);
+  margin-block-start: var(--size-p-6);
   font-weight: 500;
   font-size: 4.977rem;
   line-height: 1.2;
@@ -153,7 +156,7 @@ p,
   display: flex;
   align-items: center;
   gap: var(--size-inline);
-  margin-block-start: var(--size-p-5);
+  margin-block-start: calc(var(--size-p-5) + var(--size-block) * 0.2);
   margin-block-end: var(--size-p-5);
   font-weight: 300;
   font-size: 2.88rem;
@@ -269,6 +272,7 @@ p,
   text-wrap: balance;
   margin-inline-end: 0;
   padding-inline-end: var(--size-inline);
+  max-inline-size: 100%;
   overflow: hidden;
 }
 
