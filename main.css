@@ -328,6 +328,10 @@ p,
   text-align: center;
 }
 
+.balance {
+  text-wrap: balance;
+}
+
 .space-before-3 {
   margin-block-start: var(--size-p-3);
 }
