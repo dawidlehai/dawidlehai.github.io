@@ -92,6 +92,9 @@ a:is(:link, :visited, :hover, :active) {
   color: var(--color-link);
 }
 
+a:is(:hover, :active) {
+}
+
 abbr {
   text-decoration: none;
 }
