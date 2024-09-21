@@ -76,6 +76,17 @@ body {
   overflow-wrap: break-word;
 }
 
+::selection {
+  background-color: rgba(from var(--color-secondary) r g b / 20%);
+}
+
+/* Keep selection selectors separate. */
+/* They don't work together. */
+
+::-moz-selection {
+  background-color: rgba(from var(--color-secondary) r g b / 20%);
+}
+
 :target {
   scroll-margin-block-start: var(--space-block);
 }
