@@ -23,6 +23,7 @@
   --color-secondary: deeppink;
   --color-secondary-weak: darkorchid;
   --color-text: #341b0b;
+  --color-highlight: rgba(from var(--color-secondary) r g b / 30%);
 
   --font-size: 2rem;
   --inline-size: 62.5rem;
@@ -61,8 +62,13 @@ html {
 *,
 *:before,
 *:after {
-  -webkit-tap-highlight-color: rgba(from var(--color-secondary) r g b / 30%);
+  /* Keep tap highlight for accessibility. */
+  -webkit-tap-highlight-color: var(--color-highlight);
   box-sizing: inherit;
+}
+
+*:focus-visible {
+  outline: var(--space-d-3) solid var(--color-highlight);
 }
 
 body {
@@ -77,14 +83,14 @@ body {
 }
 
 ::selection {
-  background-color: rgba(from var(--color-secondary) r g b / 20%);
+  background-color: var(--color-highlight);
 }
 
 /* Keep selection selectors separate. */
 /* They don't work together. */
 
 ::-moz-selection {
-  background-color: rgba(from var(--color-secondary) r g b / 20%);
+  background-color: var(--color-highlight);
 }
 
 :target {
