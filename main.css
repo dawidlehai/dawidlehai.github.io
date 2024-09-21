@@ -64,12 +64,13 @@ html {
 *:after {
   /* Keep tap highlight for accessibility. */
   -webkit-tap-highlight-color: var(--color-highlight);
-  transition-duration: 0.2s;
-  transition-property: outline;
   box-sizing: inherit;
+  outline-color: hsl(from var(--color-secondary) h s 30%);
 }
 
 *:focus-visible {
+  transition-duration: 0.5s;
+  transition-property: outline-color;
   outline: var(--space-d-3) solid var(--color-highlight);
 }
 
