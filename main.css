@@ -53,6 +53,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 56.25%;
   /* font-size: 62.5%; */
 }
@@ -72,6 +73,10 @@ body {
   line-height: 1.2;
   font-family: "Inter", sans-serif;
   overflow-wrap: break-word;
+}
+
+:target {
+  scroll-margin-block-start: var(--space-block);
 }
 
 a:where(:link, :visited, :hover, :active) {
