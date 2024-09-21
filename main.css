@@ -64,6 +64,8 @@ html {
 *:after {
   /* Keep tap highlight for accessibility. */
   -webkit-tap-highlight-color: var(--color-highlight);
+  transition-duration: 0.2s;
+  transition-property: outline;
   box-sizing: inherit;
 }
 
