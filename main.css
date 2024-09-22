@@ -340,8 +340,10 @@ ul {
 
 .certificates__item {
   text-wrap: balance;
-  margin-inline-end: 0;
-  padding-inline-end: var(--space-inline);
+  margin-inline: 0;
+  margin-block: calc(var(--space-block) * -1);
+  padding-inline: var(--space-inline);
+  padding-block: var(--space-block);
   max-inline-size: 100%;
   overflow: hidden;
 }
