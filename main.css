@@ -23,7 +23,7 @@
   --color-secondary: deeppink;
   --color-secondary-weak: darkorchid;
   --color-text: #341b0b;
-  --color-highlight: rgba(from var(--color-secondary) r g b / 30%);
+  --color-highlight: rgb(from var(--color-secondary) r g b / 30%);
 
   --font-size: 2rem;
   --inline-size: 62.5rem;
@@ -170,7 +170,7 @@ ul {
 .heading-1--with-sub {
   margin-inline-end: var(--space-inline);
   margin-block-end: var(--space-block);
-  border-block-end: none;
+  border-block-end: 0;
   padding-inline-end: 0;
   padding-block-end: 0;
   max-inline-size: var(--inline-size);
