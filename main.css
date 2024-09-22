@@ -63,7 +63,7 @@ html {
   /* Keep the tap highlight for accessibility. */
   -webkit-tap-highlight-color: var(--color-highlight);
   box-sizing: inherit;
-  outline-color: hsl(from var(--color-link) h s 30%);
+  outline-color: var(--color-link);
 }
 
 *:focus-visible {
@@ -72,6 +72,10 @@ html {
   outline-color: var(--color-highlight);
   outline-style: solid;
   outline-width: var(--space-d-3);
+}
+
+*:focus-visible:hover {
+  outline-color: var(--color-link);
 }
 
 body {
@@ -104,15 +108,11 @@ body {
    is recommended by the MDN. */
 a:where(:link, :visited, :hover, :active) {
   transition-duration: 0.5s;
-  transition-property: text-decoration-color;
+  transition-property: text-decoration-color, background-color;
   color: var(--color-link);
   text-decoration-color: var(--color-highlight);
   text-decoration-thickness: 0.2em;
   text-underline-offset: 0.2em;
-}
-
-a:where(:link, :visited, :hover, :active):focus-visible {
-  text-decoration-color: transparent;
 }
 
 a:visited {
@@ -120,8 +120,25 @@ a:visited {
 }
 
 a:where(:link, :visited):is(:hover, :active) {
-  transition-duration: 0.2s;
+  transition-duration: 0.15s;
+}
+
+a:where(:link, :visited):active {
   text-decoration-color: currentColor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:where(:link, :visited):hover {
+    text-decoration-color: currentColor;
+  }
+
+  a:where(:link, :visited):active {
+    background-color: var(--color-highlight);
+  }
+}
+
+a:where(:link, :visited, :hover, :active):focus-visible {
+  text-decoration-color: transparent;
 }
 
 abbr {
