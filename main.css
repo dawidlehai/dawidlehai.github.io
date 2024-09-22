@@ -17,13 +17,12 @@
 }
 
 :root {
-  --color-primary: #dcd1ca;
-  --color-primary-light: #faf6ee;
-  --color-primary-dark: #ac9588;
-  --color-secondary: deeppink;
-  --color-secondary-weak: darkorchid;
-  --color-text: #341b0b;
-  --color-highlight: rgb(from var(--color-secondary) r g b / 30%);
+  --color-primary: #dcd2cb;
+  --color-primary-light: #faf7ef;
+  --color-primary-dark: #ab9487;
+  --color-secondary: #ff1492;
+  --color-text: #321a0b;
+  --color-highlight: hsl(from var(--color-secondary) h s l / 30%);
 
   --font-size: 2rem;
   --inline-size: 62.5rem;
@@ -103,7 +102,7 @@ a:where(:link, :visited, :hover, :active) {
 }
 
 a:where(:visited) {
-  color: var(--color-secondary-weak);
+  text-decoration-color: var(--color-primary);
 }
 
 abbr {
