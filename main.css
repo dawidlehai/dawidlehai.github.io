@@ -20,9 +20,10 @@
   --color-primary: #dcd2cb;
   --color-primary-light: #faf7ef;
   --color-primary-dark: #ab9487;
-  --color-secondary: #ff1492;
+  --color-link: #ff1492;
+  --color-visited: #cdbcb0;
   --color-text: #321a0b;
-  --color-highlight: hsl(from var(--color-secondary) h s l / 30%);
+  --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
   --font-size: 2rem;
   --inline-size: 62.5rem;
@@ -62,7 +63,7 @@ html {
   /* Keep the tap highlight for accessibility. */
   -webkit-tap-highlight-color: var(--color-highlight);
   box-sizing: inherit;
-  outline-color: hsl(from var(--color-secondary) h s 30%);
+  outline-color: hsl(from var(--color-link) h s 30%);
 }
 
 *:focus-visible {
@@ -98,11 +99,11 @@ body {
 }
 
 a:where(:link, :visited, :hover, :active) {
-  color: var(--color-secondary);
+  color: var(--color-link);
 }
 
-a:where(:visited) {
-  text-decoration-color: var(--color-primary);
+a:visited {
+  text-decoration-color: var(--color-visited);
 }
 
 abbr {
