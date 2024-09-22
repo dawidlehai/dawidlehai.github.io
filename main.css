@@ -69,7 +69,9 @@ html {
 *:focus-visible {
   transition-duration: 0.5s;
   transition-property: outline-color;
-  outline: var(--space-d-3) solid var(--color-highlight);
+  outline-color: var(--color-highlight);
+  outline-style: solid;
+  outline-width: var(--space-d-3);
 }
 
 body {
@@ -87,8 +89,8 @@ body {
   background-color: var(--color-highlight);
 }
 
-/* Keep selection selectors separate. */
-/* They don't work together. */
+/* Keep selection selectors separate.
+   They don't work together. */
 
 ::-moz-selection {
   background-color: var(--color-highlight);
@@ -98,16 +100,32 @@ body {
   scroll-margin-block-start: var(--space-block);
 }
 
+/* The order 'link-visited-hover-active'
+   is recommended by the MDN. */
 a:where(:link, :visited, :hover, :active) {
+  transition-duration: 0.5s;
+  transition-property: text-decoration-color;
   color: var(--color-link);
+  text-decoration-color: var(--color-highlight);
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 0.2em;
+}
+
+a:where(:link, :visited, :hover, :active):focus-visible {
+  text-decoration-color: transparent;
 }
 
 a:visited {
   text-decoration-color: var(--color-visited);
 }
 
+a:where(:link, :visited):is(:hover, :active) {
+  transition-duration: 0.2s;
+  text-decoration-color: currentColor;
+}
+
 abbr {
-  text-decoration: none;
+  text-decoration: 0;
 }
 
 p {
@@ -254,7 +272,7 @@ ul {
 
 .skills__item > a {
   color: currentColor;
-  text-decoration: none;
+  text-decoration: 0;
 }
 
 /* ------------------------------------
@@ -280,8 +298,11 @@ ul {
   margin-inline: var(--space-inline);
   margin-block: calc(var(--space-block) * 1.15);
 }
+
 .stack__item {
-  border: 1px solid var(--color-primary-dark);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-primary-dark);
   border-radius: var(--space-d-3);
   background: var(--bg-line);
   padding-inline: 0.75em;
