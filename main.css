@@ -110,35 +110,36 @@ a:where(:link, :visited, :hover, :active) {
   transition-duration: 0.5s;
   transition-property: text-decoration-color, background-color;
   color: var(--color-link);
-  text-decoration-color: var(--color-highlight);
   text-decoration-thickness: 0.2em;
   text-decoration-skip-ink: none;
   text-underline-offset: 0.2em;
+}
+
+a:where(:link, :hover) {
+  text-decoration-color: var(--color-highlight);
 }
 
 a:visited {
   text-decoration-color: var(--color-visited);
 }
 
-a:where(:link, :visited):is(:hover, :active) {
+a:active {
   transition-duration: 0.15s;
-}
-
-a:where(:link, :visited):active {
   text-decoration-color: currentColor;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  a:where(:link, :visited):hover {
+  a:hover {
+    transition-duration: 0.15s;
     text-decoration-color: currentColor;
   }
 
-  a:where(:link, :visited):active {
+  a:active {
     background-color: var(--color-highlight);
   }
 }
 
-a:where(:link, :visited, :hover, :active):focus-visible {
+a:focus-visible {
   text-decoration-color: transparent;
 }
 
