@@ -185,7 +185,6 @@ ul {
 }
 
 .nav__number {
-  flex-shrink: 0;
   flex-basis: 2ch;
   font-weight: 200;
 }
@@ -228,6 +227,8 @@ ul {
 
 .heading-1 {
   text-wrap: balance;
+  display: flex;
+  flex-direction: column;
   margin-inline-start: var(--space-inline);
   margin-inline-end: 0;
   margin-block-start: var(--space-m-6);
@@ -249,6 +250,10 @@ ul {
   padding-inline-end: 0;
   padding-block-end: 0;
   max-inline-size: var(--inline-size);
+}
+
+.heading-1__number {
+  font-weight: 100;
 }
 
 .heading-2 {
