@@ -22,6 +22,7 @@
   --color-primary-dark: #ab9487;
   --color-link: #ff1492;
   --color-visited: #cdbcb0;
+  --color-visited-opaque: #cdbdb14d;
   --color-text: #321a0b;
   --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
@@ -171,27 +172,30 @@ ul {
 
 .nav__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13.75ch, 1fr));
+  row-gap: var(--space-d-2);
   margin-inline: var(--space-inline);
+  max-inline-size: var(--inline-size);
 }
 
 .nav__item {
   display: flex;
-  align-items: flex-start;
-  margin-block: var(--space-d-2);
+  gap: var(--space-d-2);
   line-height: 1.7;
-}
-
-.nav__item > a:where(:link, :visited, :hover, :active) {
-  color: currentColor;
 }
 
 .nav__number {
   flex-shrink: 0;
-  flex-basis: 3ch;
+  flex-basis: 2ch;
   font-weight: 200;
-  font-size: 2.65rem;
-  line-height: 1.5;
+}
+
+.nav__link:where(:link, :visited, :hover, :active) {
+  color: currentColor;
+}
+
+.nav__link:where(:link, :visited) {
+  text-decoration-color: var(--color-visited-opaque);
 }
 
 /* ------------------------------------
