@@ -129,6 +129,7 @@ a:active {
   text-decoration-color: currentColor;
 }
 
+/* TODO: Change to hover for simplicity */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     transition-duration: 0.15s;
@@ -353,19 +354,31 @@ ul {
    --------------------------------- */
 
 .videos {
-  display: flex;
-  gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.videos__desktop {
-  flex-basis: 76%;
+.videos__item {
+  grid-row: 1;
+  grid-column: 1;
 }
 
-.videos__mobile {
-  flex-basis: 24%;
+.videos__item--desktop {
 }
 
-.video {
+.videos__item--mobile {
+  justify-self: end;
+  z-index: 1;
+  margin-inline-end: var(--space-inline);
+  margin-block-start: var(--space-inline);
+  box-shadow: 0 0 var(--space-inline) 0 rgb(0 0 0 / 50%);
+  border-radius: var(--space-d-3);
+  width: 30%;
+  overflow: hidden;
+}
+
+.videos__video {
+  display: block;
   inline-size: 100%;
 }
 
