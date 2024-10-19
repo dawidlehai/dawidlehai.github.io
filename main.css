@@ -129,7 +129,7 @@ a:active {
   text-decoration-color: currentColor;
 }
 
-/* TODO: Change to hover for simplicity */
+/* Doesn't work without pointer: fine. */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     transition-duration: 0.15s;
