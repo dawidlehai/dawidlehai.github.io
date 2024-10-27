@@ -363,9 +363,6 @@ ul {
   grid-column: 1;
 }
 
-.videos__item--desktop {
-}
-
 .videos__item--mobile {
   justify-self: end;
   z-index: 1;
