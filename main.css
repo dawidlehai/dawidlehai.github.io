@@ -358,12 +358,12 @@ ul {
   grid-template-columns: 1fr;
 }
 
-.videos__item {
+.video-container {
   grid-row: 1;
   grid-column: 1;
 }
 
-.videos__item--mobile {
+.video-container--mobile {
   justify-self: end;
   z-index: 1;
   margin-inline-end: var(--space-inline);
@@ -374,7 +374,7 @@ ul {
   overflow: hidden;
 }
 
-.videos__video {
+.video {
   display: block;
   inline-size: 100%;
 }
