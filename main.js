@@ -1,4 +1,4 @@
-"use strict";
+import attachVideoPlayButtons from "./scripts/attachVideoPlayButtons.js";
 
 const desktopVideos = document.querySelectorAll(".js-video-desktop");
 const videosMap = new Map();
@@ -11,16 +11,26 @@ const options = {
 
 const videoObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    const mobileVideo = videosMap.get(entry.target);
-    const videos = [entry.target, mobileVideo];
+    const desktopVideo = entry.target;
+    const mobileVideo = videosMap.get(desktopVideo);
 
-    videos.forEach((video) => {
-      if (entry.isIntersecting) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
+    if (entry.isIntersecting) {
+      console.log("intersection");
+      desktopVideo
+        .play()
+        .then(() => {
+          mobileVideo.play();
+        })
+        .catch(() => {
+          videosMap.forEach((_, videoDesktop) => {
+            videoObserver.unobserve(videoDesktop);
+          });
+          attachVideoPlayButtons();
+        });
+    } else {
+      desktopVideo.pause();
+      mobileVideo.pause();
+    }
   });
 }, options);
 
