@@ -23,6 +23,7 @@
   --color-link: #ff1492;
   --color-visited: #cdbcb0;
   --color-visited-opaque: #cdbdb14d;
+  --color-video-play-button: #cdbdb14d;
   --color-text: #321a0b;
   --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
@@ -377,6 +378,26 @@ ul {
 .video {
   display: block;
   inline-size: 100%;
+}
+
+@media (scripting: enabled) {
+  .video-play-button {
+    all: unset;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    justify-self: start;
+    backdrop-filter: blur(0.5em);
+    cursor: pointer;
+    margin-inline: var(--space-inline);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-primary-dark);
+    background-color: var(--color-video-play-button);
+    padding-inline: 0.75em;
+    padding-block: 0.5em;
+    border-radius: var(--space-d-3);
+  }
 }
 
 /* ------------------------------------
