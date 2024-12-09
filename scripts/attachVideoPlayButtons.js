@@ -1,4 +1,4 @@
-function attachVideoPlayButtons() {
+export default function attachVideoPlayButtons() {
   const playText = "Play";
   const pauseText = "Pause";
   const buttonClass = "video-play-button";
@@ -30,5 +30,3 @@ function attachVideoPlayButtons() {
     }
   });
 }
-
-export default attachVideoPlayButtons;
