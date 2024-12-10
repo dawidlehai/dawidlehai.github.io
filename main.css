@@ -27,8 +27,8 @@
   --color-text: #321a0b;
   --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
-  --font-size: 2rem;
-  --inline-size: 62.5rem;
+  --font-size: 1rem;
+  --inline-size: 35.15625rem;
 
   --space-block: calc(var(--font-size) * 1.5);
   --space-inline: var(--font-size);
@@ -55,8 +55,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-size: 56.25%;
-  /* font-size: 62.5%; */
+  font-size: calc(100% + 0.25vw);
 }
 
 *,
@@ -240,7 +239,7 @@ ul {
   padding-block-end: var(--space-d-2);
   max-inline-size: 100%;
   font-weight: 500;
-  font-size: 4.977rem;
+  font-size: 2.7995625000000004rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
@@ -265,7 +264,7 @@ ul {
   margin-block-end: var(--space-block);
   max-inline-size: var(--inline-size);
   font-weight: 600;
-  font-size: 3.456rem;
+  font-size: 1.944rem;
   line-height: 1.25;
 }
 
@@ -276,7 +275,7 @@ ul {
   margin-block-end: var(--space-block);
   max-inline-size: var(--inline-size);
   font-weight: 400;
-  font-size: 2.88rem;
+  font-size: 1.6199999999999999rem;
   line-height: 1.25;
 }
 
@@ -287,7 +286,7 @@ ul {
   margin-block-end: calc(var(--space-d-3) * -1);
   max-inline-size: var(--inline-size);
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 1.3499999999999999rem;
   line-height: 1.25;
 }
 
@@ -300,7 +299,7 @@ ul {
   margin-block-start: calc(var(--space-d-2) * -1);
   margin-block-end: var(--space-block);
   font-weight: 300;
-  font-size: 2.88rem;
+  font-size: 1.6199999999999999rem;
   line-height: 1.25;
 }
 
@@ -325,7 +324,7 @@ ul {
 }
 
 .skills__item {
-  margin-inline-start: calc(var(--space-inline) + 0.25rem);
+  margin-inline-start: calc(var(--space-inline) + var(--font-size) / 4);
   margin-block: var(--space-d-3);
 }
 
@@ -393,10 +392,10 @@ ul {
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-primary-dark);
+    border-radius: var(--space-d-3);
     background-color: var(--color-video-play-button);
     padding-inline: 0.75em;
     padding-block: 0.5em;
-    border-radius: var(--space-d-3);
   }
 }
 
