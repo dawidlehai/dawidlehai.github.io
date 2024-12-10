@@ -46,7 +46,7 @@
   --space-m-5: calc(var(--space-block) * 5);
   --space-m-6: calc(var(--space-block) * 6);
 
-  --blur: 0.1rem;
+  --blur: 0.5rem;
 }
 
 html {
