@@ -31,6 +31,9 @@
   --font-size: 1rem;
   --inline-size: 31.25rem; /* ~50ch */
 
+  --padding-block: 0.5em;
+  --padding-inline: 0.75em;
+
   --space-block: calc(var(--font-size) * 1.5);
   --space-inline: var(--font-size);
 
@@ -42,6 +45,8 @@
   --space-m-4: calc(var(--space-block) * 4);
   --space-m-5: calc(var(--space-block) * 5);
   --space-m-6: calc(var(--space-block) * 6);
+
+  --blur: 0.1rem;
 }
 
 html {
@@ -123,7 +128,7 @@ a:active {
   text-decoration-color: currentColor;
 }
 
-/* Doesn't work without pointer: fine. */
+/* Doesn't work without `pointer: fine`. */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     transition-duration: 0.15s;
@@ -152,6 +157,26 @@ p {
 ul {
   padding-inline-start: 0;
   list-style: none;
+}
+
+/* ------------------------------------
+   Reusable utilities
+   --------------------------------- */
+
+.info {
+  text-wrap: wrap;
+  margin-block-start: calc(var(--space-d-2) * -1);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.italic-light {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.center {
+  text-align: center;
 }
 
 /* ------------------------------------
@@ -204,10 +229,6 @@ ul {
 
 .title__inner {
   font-size: 10cqi;
-}
-
-.also-on {
-  text-align: center;
 }
 
 /* ------------------------------------
@@ -263,9 +284,6 @@ ul {
 
 .subheading {
   text-wrap: balance;
-  display: flex;
-  align-items: center;
-  gap: var(--space-inline);
   margin-block-start: calc(var(--space-d-2) * -1);
   margin-block-end: var(--space-block);
   font-weight: 300;
@@ -298,17 +316,6 @@ ul {
 }
 
 /* ------------------------------------
-   Info
-   --------------------------------- */
-
-.info {
-  text-wrap: wrap;
-  margin-block-start: calc(var(--space-d-2) * -1);
-  font-style: italic;
-  font-weight: 300;
-}
-
-/* ------------------------------------
    Videos
    --------------------------------- */
 
@@ -316,7 +323,6 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   margin-inline: calc(var(--space-inline) * -1);
-  width: calc(100% + var(--space-inline) * 2);
 }
 
 .video-container {
@@ -327,10 +333,10 @@ ul {
 .video-container--mobile {
   justify-self: end;
   z-index: 1;
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(var(--blur));
   margin-inline-end: var(--space-inline);
   margin-block-start: var(--space-inline);
-  border-width: 0.25rem;
+  border-width: calc(var(--font-size) * 0.25);
   border-style: solid;
   border-color: var(--color-visited-opaque);
   width: 30%;
@@ -342,20 +348,18 @@ ul {
   inline-size: 100%;
 }
 
-@media (scripting: enabled) {
-  .video-play-button {
-    all: unset;
-    grid-row: 1;
-    grid-column: 1;
-    align-self: end;
-    justify-self: start;
-    backdrop-filter: blur(0.5rem);
-    cursor: pointer;
-    margin-inline: var(--space-inline);
-    background-color: var(--color-video-play-button);
-    padding-inline: 0.75em;
-    padding-block: 0.5em;
-  }
+.video-play-button {
+  all: unset;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
+  justify-self: start;
+  backdrop-filter: blur(var(--blur));
+  cursor: pointer;
+  margin-inline: var(--space-inline);
+  background-color: var(--color-video-play-button);
+  padding-inline: var(--padding-inline);
+  padding-block: var(--padding-block);
 }
 
 /* ------------------------------------
@@ -372,8 +376,8 @@ ul {
 
 .stack__item {
   background-color: var(--color-secondary-light);
-  padding-inline: 0.75em;
-  padding-block: 0.5em;
+  padding-inline: var(--padding-inline);
+  padding-block: var(--padding-block);
 }
 
 /* ------------------------------------
@@ -383,17 +387,8 @@ ul {
 .aside {
   text-wrap: balance;
   background-color: var(--color-visited-opaque);
-  padding-inline: 0.75em;
-  padding-block: 0.5em;
-}
-
-/* ------------------------------------
-   Creations
-   --------------------------------- */
-
-.creations__type {
-  font-style: italic;
-  font-weight: 300;
+  padding-inline: var(--padding-inline);
+  padding-block: var(--padding-block);
 }
 
 /* ------------------------------------
@@ -402,11 +397,6 @@ ul {
 
 .certificates__item {
   text-wrap: balance;
-}
-
-.certificates__issued {
-  font-style: italic;
-  font-weight: 300;
 }
 
 /* ------------------------------------
