@@ -28,7 +28,7 @@
   --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
   --font-size: 1rem;
-  --inline-size: 35.15625rem;
+  --inline-size: 31.25rem; /* ~50ch */
 
   --space-block: calc(var(--font-size) * 1.5);
   --space-inline: var(--font-size);
@@ -239,7 +239,7 @@ ul {
   padding-block-end: var(--space-d-2);
   max-inline-size: 100%;
   font-weight: 500;
-  font-size: 2.7995625000000004rem;
+  font-size: 2.8rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
@@ -264,7 +264,7 @@ ul {
   margin-block-end: var(--space-block);
   max-inline-size: var(--inline-size);
   font-weight: 600;
-  font-size: 1.944rem;
+  font-size: 1.94rem;
   line-height: 1.25;
 }
 
@@ -275,7 +275,7 @@ ul {
   margin-block-end: var(--space-block);
   max-inline-size: var(--inline-size);
   font-weight: 400;
-  font-size: 1.6199999999999999rem;
+  font-size: 1.62rem;
   line-height: 1.25;
 }
 
@@ -286,7 +286,7 @@ ul {
   margin-block-end: calc(var(--space-d-3) * -1);
   max-inline-size: var(--inline-size);
   font-weight: 500;
-  font-size: 1.3499999999999999rem;
+  font-size: 1.35rem;
   line-height: 1.25;
 }
 
@@ -299,7 +299,7 @@ ul {
   margin-block-start: calc(var(--space-d-2) * -1);
   margin-block-end: var(--space-block);
   font-weight: 300;
-  font-size: 1.6199999999999999rem;
+  font-size: 1.62rem;
   line-height: 1.25;
 }
 
