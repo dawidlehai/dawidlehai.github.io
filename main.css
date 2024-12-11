@@ -300,17 +300,17 @@ ul {
    Skills
    --------------------------------- */
 
-.skills__item {
+.skill__experience-item {
   margin-inline-start: calc(var(--space-inline) + var(--font-size) / 4);
   margin-block: var(--space-d-3);
 }
 
-.skills__item::marker {
+.skill__experience-item::marker {
   content: "■  ";
   color: var(--color-visited-opaque);
 }
 
-.skills__item > a {
+.skill__experience-item > a {
   color: currentColor;
   text-decoration: 0;
 }
