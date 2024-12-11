@@ -29,7 +29,7 @@
   --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
   --font-size: 1rem;
-  --inline-size: 31.25rem; /* ~50ch */
+  --inline-size: 50ch;
 
   --padding-block: 0.5em;
   --padding-inline: 0.75em;
@@ -295,20 +295,24 @@ ul {
    Skills
    --------------------------------- */
 
+.skill__details {
+  --space-details: calc(var(--space-m-1) / 2);
+}
+
 .skill__details[open] {
-  margin-block-end: var(--space-block);
+  margin-block-end: var(--space-details);
 }
 
 .skill__summary {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  margin-block: var(--space-block);
+  padding-block: var(--space-details);
   font-size: 1.35rem;
 }
 
 .skill__details[open] > .skill__summary {
-  margin-block-end: var(--space-d-3);
+  padding-block-end: var(--space-d-3);
 }
 
 .skill__summary::marker {
