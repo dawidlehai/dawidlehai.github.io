@@ -338,18 +338,6 @@ ul {
   text-underline-offset: 0.2em;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .skill__summary:hover .skill__heading {
-    transition-duration: var(--duration-short);
-    text-decoration-color: currentColor;
-  }
-
-  .skill__summary:hover::after {
-    transition-duration: var(--duration-short);
-    color: var(--color-text);
-  }
-}
-
 .skill__experience-item {
   margin-inline-start: var(--space-inline);
   margin-block-start: var(--space-d-3);
@@ -363,6 +351,31 @@ ul {
 .skill__experience-item > a {
   color: currentColor;
   text-decoration: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill__summary:hover > .skill__heading {
+    transition-duration: var(--duration-short);
+    text-decoration-color: currentColor;
+  }
+
+  .skill__summary:hover::after {
+    transition-duration: var(--duration-short);
+    color: var(--color-text);
+  }
+}
+
+/* The order of `:focus-visible` selectors after
+   `:hover` selectors is not accidental. */
+
+.skill__summary:focus-visible > .skill__heading {
+  transition-duration: var(--duration-short);
+  text-decoration-color: transparent;
+}
+
+.skill__summary:focus-visible::after {
+  transition-duration: var(--duration-short);
+  color: var(--color-text);
 }
 
 /* ------------------------------------
