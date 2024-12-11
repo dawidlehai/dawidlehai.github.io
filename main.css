@@ -46,6 +46,9 @@
   --space-m-5: calc(var(--space-block) * 5);
   --space-m-6: calc(var(--space-block) * 6);
 
+  --duration-short: 0.15s;
+  --duration-long: 0.5s;
+
   --blur: 0.5rem;
 }
 
@@ -65,7 +68,7 @@ html {
 }
 
 *:focus-visible {
-  transition-duration: 0.5s;
+  transition-duration: var(--duration-long);
   transition-property: outline-color;
   outline-color: var(--color-highlight);
   outline-style: solid;
@@ -107,8 +110,8 @@ body {
 /* The order 'link-visited-hover-active'
    is recommended by the MDN. */
 a:where(:link, :visited, :hover, :active) {
-  transition-duration: 0.5s;
-  transition-property: text-decoration-color, background-color;
+  transition-duration: var(--duration-long);
+  transition-property: text-decoration-color;
   color: var(--color-link);
   text-decoration-thickness: 0.2em;
   text-decoration-skip-ink: none;
@@ -124,14 +127,14 @@ a:visited {
 }
 
 a:active {
-  transition-duration: 0.15s;
+  transition-duration: var(--duration-short);
   text-decoration-color: currentColor;
 }
 
 /* Doesn't work without `pointer: fine`. */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
-    transition-duration: 0.15s;
+    transition-duration: var(--duration-short);
     text-decoration-color: currentColor;
   }
 
@@ -155,6 +158,7 @@ p {
 }
 
 ul {
+  margin-block: 0;
   padding-inline-start: 0;
   list-style: none;
 }
@@ -273,15 +277,6 @@ ul {
   line-height: 1.25;
 }
 
-.heading-4 {
-  text-wrap: balance;
-  margin-block-start: var(--space-m-1);
-  margin-block-end: calc(var(--space-d-3) * -1);
-  font-weight: 500;
-  font-size: 1.35rem;
-  line-height: 1.25;
-}
-
 .subheading {
   text-wrap: balance;
   margin-block-start: calc(var(--space-d-2) * -1);
@@ -300,14 +295,65 @@ ul {
    Skills
    --------------------------------- */
 
+.skill__details[open] {
+  margin-block-end: var(--space-block);
+}
+
+.skill__summary {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-block: var(--space-block);
+  font-size: 1.35rem;
+}
+
+.skill__details[open] > .skill__summary {
+  margin-block-end: var(--space-d-3);
+}
+
+.skill__summary::marker {
+  content: "";
+}
+
+.skill__summary::after {
+  display: flex;
+  align-items: center;
+  transition-duration: var(--duration-long);
+  transition-property: transform;
+  content: "+";
+  color: var(--color-primary-dark);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.skill__details[open] > .skill__summary::after {
+  transform: rotate(-45deg);
+  transition-duration: var(--duration-short);
+}
+
+.skill__heading {
+  text-wrap: balance;
+  transition-duration: var(--duration-long);
+  transition-property: text-decoration-color;
+  margin-block: 0;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.25;
+  text-decoration: underline;
+  text-decoration-color: var(--color-visited-opaque);
+  text-decoration-thickness: 0.2em;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+}
+
 .skill__experience-item {
-  margin-inline-start: calc(var(--space-inline) + var(--font-size) / 4);
-  margin-block: var(--space-d-3);
+  margin-inline-start: var(--space-inline);
+  margin-block-start: var(--space-d-3);
 }
 
 .skill__experience-item::marker {
-  content: "■  ";
-  color: var(--color-visited-opaque);
+  content: "+ ";
+  color: var(--color-primary-dark);
 }
 
 .skill__experience-item > a {
