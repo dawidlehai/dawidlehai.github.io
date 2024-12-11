@@ -137,10 +137,6 @@ a:active {
     transition-duration: var(--duration-short);
     text-decoration-color: currentColor;
   }
-
-  a:active {
-    background-color: var(--color-highlight);
-  }
 }
 
 a:focus-visible {
@@ -302,6 +298,7 @@ ul {
 .skill__summary {
   display: flex;
   justify-content: space-between;
+  gap: var(--space-d-2);
   cursor: pointer;
   margin-block: calc(var(--space-m-1) / 2);
   font-size: 1.35rem;
@@ -314,8 +311,8 @@ ul {
 .skill__summary::after {
   display: flex;
   align-items: center;
-  transition-duration: var(--duration-long);
-  transition-property: transform;
+  transition-duration: var(--duration-short), var(--duration-long);
+  transition-property: transform, color;
   content: "+";
   color: var(--color-primary-dark);
   font-weight: 300;
@@ -324,7 +321,6 @@ ul {
 
 .skill__details[open] > .skill__summary::after {
   transform: rotate(-45deg);
-  transition-duration: var(--duration-short);
 }
 
 .skill__heading {
@@ -334,12 +330,24 @@ ul {
   margin-block: 0;
   font-weight: 500;
   font-size: inherit;
-  line-height: 1.25;
+  line-height: 1.4;
   text-decoration: underline;
   text-decoration-color: var(--color-visited-opaque);
   text-decoration-thickness: 0.2em;
   text-decoration-skip-ink: none;
   text-underline-offset: 0.2em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill__summary:hover .skill__heading {
+    transition-duration: var(--duration-short);
+    text-decoration-color: currentColor;
+  }
+
+  .skill__summary:hover::after {
+    transition-duration: var(--duration-short);
+    color: var(--color-text);
+  }
 }
 
 .skill__experience-item {
