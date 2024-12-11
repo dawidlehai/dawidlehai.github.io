@@ -23,8 +23,8 @@
   --color-secondary-light: #c5e3fd81;
   --color-link: #ff1492;
   --color-visited: #cdbcb0;
-  --color-visited-opaque: #cdbdb14d;
-  --color-video-play-button: #cdbdb14d;
+  --color-visited-opaque: hsl(from var(--color-visited) h s l / 30%);
+  --color-video-play-button: var(--color-visited-opaque);
   --color-text: #321a0b;
   --color-highlight: hsl(from var(--color-link) h s l / 30%);
 
@@ -295,24 +295,16 @@ ul {
    Skills
    --------------------------------- */
 
-.skill__details {
-  --space-details: calc(var(--space-m-1) / 2);
-}
-
 .skill__details[open] {
-  margin-block-end: var(--space-details);
+  margin-block-end: var(--space-m-1);
 }
 
 .skill__summary {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding-block: var(--space-details);
+  margin-block: calc(var(--space-m-1) / 2);
   font-size: 1.35rem;
-}
-
-.skill__details[open] > .skill__summary {
-  padding-block-end: var(--space-d-3);
 }
 
 .skill__summary::marker {
