@@ -14,13 +14,13 @@
   </head>
   <body>
     <main>
-      <h1 class="title">
+      <h1 class="title container">
         <span class="title__inner"
           >Dawid Le Hai<br />
           Front-End Developer</span
         >
       </h1>
-      <address>
+      <address class="container">
         <p class="center">
           Also on
           <a href="#">Just Join IT</a>,
@@ -28,7 +28,7 @@
           <a href="https://github.com/saitamason">GitHub</a>
         </p>
       </address>
-      <nav class="nav">
+      <nav class="nav container">
         <h2 class="heading-3">Contents</h2>
         <ul class="nav__list">
           <li class="nav__item">
@@ -57,7 +57,7 @@
           </li>
         </ul>
       </nav>
-      <section id="about">
+      <section id="about" class="container">
         <h2 class="heading-1">
           <span class="heading-1__number">01</span>
           <span>About</span>
@@ -75,7 +75,7 @@
           single-page applications, Node.js apps, and Photoshop scripts.
         </p>
       </section>
-      <section id="skills">
+      <section id="skills" class="container">
         <h2 class="heading-1">
           <span class="heading-1__number">02</span>
           <span>Skills</span>
@@ -93,16 +93,12 @@
               </summary>
               <ul>
                 <li class="skill__experience-item">
-                  <a href="#experience">4 years of professional experience</a>
+                  4 years of professional experience
                 </li>
                 <li class="skill__experience-item">
-                  <a href="#commercial-projects"
-                    >Countless commercial projects</a
-                  >
+                  Countless commercial projects
                 </li>
-                <li class="skill__experience-item">
-                  <a href="#certificates">6 related certificates</a>
-                </li>
+                <li class="skill__experience-item">6 related certificates</li>
               </ul>
             </details>
           </section>
@@ -112,12 +108,8 @@
                 <h3 class="skill__heading">React, TypeScript, Remix</h3>
               </summary>
               <ul>
-                <li class="skill__experience-item">
-                  <a href="#commercial-projects">4 commercial projects</a>
-                </li>
-                <li class="skill__experience-item">
-                  <a href="#certificates">4 related certificates</a>
-                </li>
+                <li class="skill__experience-item">4 commercial projects</li>
+                <li class="skill__experience-item">4 related certificates</li>
               </ul>
             </details>
           </section>
@@ -128,16 +120,12 @@
               </summary>
               <ul>
                 <li class="skill__experience-item">
-                  <a href="#experience">1 year of professional experience</a>
+                  1 year of professional experience
                 </li>
                 <li class="skill__experience-item">
-                  <a href="#commercial-projects"
-                    >1 ongoing commercial project</a
-                  >
+                  1 ongoing commercial project
                 </li>
-                <li class="skill__experience-item">
-                  <a href="#certificates">1 related certification</a>
-                </li>
+                <li class="skill__experience-item">1 related certification</li>
               </ul>
             </details>
           </section>
@@ -147,12 +135,8 @@
                 <h3 class="skill__heading">Next.js, React Router, Redux</h3>
               </summary>
               <ul>
-                <li class="skill__experience-item">
-                  <a href="#personal-projects">2 personal projects</a>
-                </li>
-                <li class="skill__experience-item">
-                  <a href="#certificates">3 related certificates</a>
-                </li>
+                <li class="skill__experience-item">2 personal projects</li>
+                <li class="skill__experience-item">3 related certificates</li>
               </ul>
             </details>
           </section>
@@ -162,12 +146,8 @@
                 <h3 class="skill__heading">Express.js, MongoDB</h3>
               </summary>
               <ul>
-                <li class="skill__experience-item">
-                  <a href="#personal-projects">2 personal projects</a>
-                </li>
-                <li class="skill__experience-item">
-                  <a href="#certificates">2 related certificates</a>
-                </li>
+                <li class="skill__experience-item">2 personal projects</li>
+                <li class="skill__experience-item">2 related certificates</li>
               </ul>
             </details>
           </section>
@@ -185,526 +165,234 @@
         </section>
       </section>
       <section id="projects">
-        <h2 class="heading-1 heading-1--with-sub">
+        <h2 class="heading-1 heading-1--centered container">
           <span class="heading-1__number">03</span>
           <span>Projects</span>
         </h2>
         <section id="commercial-projects">
-          <h3 class="subheading">Commercial projects</h3>
-          <section>
-            <h4 class="heading-2">
-              <a href="https://oohattention.com/">OOH!Attention</a>
-            </h4>
-            <p class="info">Designed by Damian Jaszczyk, <time>2024</time></p>
-            <div class="videos js-videos">
-              <div class="video-container video-container--desktop">
-                <video
-                  class="video js-video-desktop"
-                  src="videos/ooh-attention-desktop.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
+          <div class="container container--projects">
+            <section>
+              <h4 class="heading-2">
+                <a href="https://oohattention.com/">OOH!Attention</a>
+              </h4>
+              <p class="info">Designed by Damian Jaszczyk, <time>2024</time></p>
+              <div class="videos js-videos">
+                <div class="video-container video-container--desktop">
+                  <video
+                    class="video js-video-desktop"
+                    src="videos/ooh-attention-desktop.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
+                <div class="video-container video-container--mobile">
+                  <video
+                    class="video js-video-mobile"
+                    src="videos/ooh-attention-mobile.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
               </div>
-              <div class="video-container video-container--mobile">
-                <video
-                  class="video js-video-mobile"
-                  src="videos/ooh-attention-mobile.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
+            </section>
+            <section>
+              <h4 class="heading-2">
+                <a href="https://sarigato.com/">Sarigato</a>
+              </h4>
+              <p class="info">Designed by Damian Jaszczyk, <time>2024</time></p>
+              <div class="videos js-videos">
+                <div class="video-container video-container--desktop">
+                  <video
+                    class="video js-video-desktop"
+                    src="videos/sarigato-desktop.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
+                <div class="video-container video-container--mobile">
+                  <video
+                    class="video js-video-mobile"
+                    src="videos/sarigato-mobile.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
               </div>
-            </div>
-            <p>
-              Showcase of an innovative out-of-home solution, a
-              first-of-its-kind in Poland. Despite the complex design, I
-              successfully delivered a fast-loading and fully responsive website
-              within a tight deadline. The project highlights two dynamic shapes
-              that animate as you scroll through the page, along with
-              mesmerizing orbs in the hero section.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">JavaScript</li>
-              <li class="stack__item">
-                <abbr title="GreenSock Animation Platform">GSAP</abbr>
-              </li>
-              <li class="stack__item">
-                <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
-              </li>
-              <li class="stack__item">Vite</li>
-              <li class="stack__item">Adobe XD</li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">
-              <a href="https://sarigato.com/">Sarigato</a>
-            </h4>
-            <p class="info">Designed by Damian Jaszczyk, <time>2024</time></p>
-            <div class="videos js-videos">
-              <div class="video-container video-container--desktop">
-                <video
-                  class="video js-video-desktop"
-                  src="videos/sarigato-desktop.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
+            </section>
+            <section>
+              <h4 class="heading-2">
+                <a href="https://carlazuri.com/">Carla Zuri</a>
+              </h4>
+              <p class="info">Designed by Damian Jaszczyk, <time>2023</time></p>
+              <div class="videos js-videos">
+                <div class="video-container video-container--desktop">
+                  <video
+                    class="video js-video-desktop"
+                    src="videos/carla-zuri-desktop.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
+                <div class="video-container video-container--mobile">
+                  <video
+                    class="video js-video-mobile"
+                    src="videos/carla-zuri-mobile.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
               </div>
-              <div class="video-container video-container--mobile">
-                <video
-                  class="video js-video-mobile"
-                  src="videos/sarigato-mobile.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
+            </section>
+            <section>
+              <h4 class="heading-2">Rich media</h4>
+              <p class="info">Various designers, <time>2023</time>–present</p>
+            </section>
+            <section>
+              <h4 class="heading-2">
+                <a href="https://kociolekbydgoszcz.pl/">Kociołek</a>
+              </h4>
+              <p class="info"><time>2023</time></p>
+              <div class="videos js-videos">
+                <div class="video-container video-container--desktop">
+                  <video
+                    class="video js-video-desktop"
+                    src="videos/kociolek-desktop.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
+                <div class="video-container video-container--mobile">
+                  <video
+                    class="video js-video-mobile"
+                    src="videos/kociolek-mobile.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
               </div>
-            </div>
-            <p>
-              Single-page website that adheres to key web accessibility
-              principles and captivates viewers with stunning visual effects
-              while maintaining a clean, practical layout that aligns with the
-              company's creative profile. Fully responsive, it delivers an
-              exceptional user experience across diverse screen sizes.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">React</li>
-              <li class="stack__item">TypeScript</li>
-              <li class="stack__item">
-                <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
-              </li>
-              <li class="stack__item">Adobe XD</li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">
-              <a href="https://carlazuri.com/">Carla Zuri</a>
-            </h4>
-            <p class="info">Designed by Damian Jaszczyk, <time>2023</time></p>
-            <div class="videos js-videos">
-              <div class="video-container video-container--desktop">
-                <video
-                  class="video js-video-desktop"
-                  src="videos/carla-zuri-desktop.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
+            </section>
+            <section>
+              <h4 class="heading-2">
+                <a href="https://saitama-natio.netlify.app/">Natio</a>
+              </h4>
+              <p class="info"><time>2023</time></p>
+              <div class="videos js-videos">
+                <div class="video-container video-container--desktop">
+                  <video
+                    class="video js-video-desktop"
+                    src="videos/natio-desktop.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
+                <div class="video-container video-container--mobile">
+                  <video
+                    class="video js-video-mobile"
+                    src="videos/natio-mobile.mp4"
+                    loop
+                    muted
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
               </div>
-              <div class="video-container video-container--mobile">
-                <video
-                  class="video js-video-mobile"
-                  src="videos/carla-zuri-mobile.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-            </div>
-            <p>
-              The project exhibits the creative agency's core strengths through
-              beautifully designed pop-ups showcasing a collection of its case
-              studies. It's a fully responsive single-page website compliant
-              with core web accessibility principles. In addition to its
-              visually appealing design, the website boasts impressive
-              performance metrics.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">React</li>
-              <li class="stack__item">TypeScript</li>
-              <li class="stack__item">
-                <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
-              </li>
-              <li class="stack__item">Adobe XD</li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">Rich media</h4>
-            <p class="info">Various designers, <time>2023</time>–present</p>
-            <p>
-              At Sataku, I've coded numerous captivating and exceptionally
-              interactive JavaScript banners for desktop and mobile. These
-              projects showcase a high level of complexity, featuring
-              mini-games, multiple views, and advanced animations. Among the
-              distinguished brands I've collaborated with are BMW, Danone, Dove,
-              Ferrero, Lego, Loreal, Mastercard, Mattel, McDonald's, Mercedes,
-              Nestle, Nissan, Orange, Orlen, and Renault.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">JavaScript</li>
-              <li class="stack__item">
-                <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
-              </li>
-              <li class="stack__item">
-                <abbr title="HyperText Markup Language">HTML</abbr>
-              </li>
-              <li class="stack__item">
-                <abbr title="GreenSock Animation Platform">GSAP</abbr>
-              </li>
-              <li class="stack__item">Photoshop</li>
-            </ul>
-            <p>
-              Watch
-              <a href="https://www.youtube.com/watch?v=fKJrZD672CQ"
-                >a showreel of our work at Sataku</a
-              >
-              or explore my selected creations below.
-            </p>
-            <h3 class="heading-3">Selected creations</h3>
-            <aside>
-              <p class="aside">
-                Once you open the creation, hover or click to explore its full
-                potential.
+            </section>
+          </div>
+          <div class="container">
+            <section>
+              <h4 class="heading-2">Sataku Automation Script</h4>
+              <p class="info"><time>2023</time>–present</p>
+              <p>
+                Node.js and Photoshop scripts designed to streamline developers'
+                workflows by automating asset export and the generation of
+                <abbr title="HyperText Markup Language">HTML</abbr> and SCSS
+                (<abbr title="Syntactically Awesome StyleSheets">Sass</abbr>)
+                code to accurately reproduce compositions.
               </p>
-            </aside>
-            <ul>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/797/15"
-                    >Renault Symbioz</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/741/15"
-                    >Matas Summer Sale</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/650/15"
-                    >Loreal Armani Aqua Di Gio</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/594/15"
-                    >Nissan Juke</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/570/15"
-                    >Orange Nju Mobile</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/528/7"
-                    >Mercedes AMG GT</a
-                  ><br />
-                  <span class="italic-light">desktop expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/584/7"
-                    >Storm Bicycles</a
-                  ><br />
-                  <span class="italic-light">desktop expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/496/7"
-                    >SodaStream Summer</a
-                  ><br />
-                  <span class="italic-light">desktop expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://preview.sataku.com/campaign/1ecCDG5SAz/24"
-                    >Mattel Monster High</a
-                  ><br />
-                  <span class="italic-light">mobile interactive</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://preview.sataku.com/campaign/8BITDlZ7OB/24"
-                    >Mattel Hot Wheels Ultimate Hauler</a
-                  ><br />
-                  <span class="italic-light">mobile interactive</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/247/7"
-                    >ETI Dare &amp; Browni Christmas</a
-                  ><br />
-                  <span class="italic-light">desktop expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/166/15"
-                    >Nestle Winiary Maggi</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-              <li>
-                <p class="creations__item">
-                  <a href="https://prev.sataku.com/campaign/147/15"
-                    >Sephora Too Faced Doll Lashes</a
-                  ><br />
-                  <span class="italic-light">mobile expand</span>
-                </p>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">Sataku Automation Script</h4>
-            <p class="info"><time>2023</time>–present</p>
-            <p>
-              Node.js and Photoshop scripts designed to streamline developers'
-              workflows by automating asset export and the generation of
-              <abbr title="HyperText Markup Language">HTML</abbr> and SCSS
-              (<abbr title="Syntactically Awesome StyleSheets">Sass</abbr>) code
-              to accurately reproduce compositions.
-            </p>
-            <p>
-              As the lead developer, I prioritize sustainable code architecture
-              to ensure long-term efficiency in our development process. The
-              code has excellent test coverage and is maintained as a privately
-              distributed npm package with a clean changelog and well-structured
-              release formats.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">Node.js</li>
-              <li class="stack__item">JavaScript</li>
-              <li class="stack__item">Jest</li>
-              <li class="stack__item">ExtendScript</li>
-              <li class="stack__item">Photoshop</li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">Sataku Webpack Template</h4>
-            <p class="info"><time>2023</time>–present</p>
-            <p>
-              An essential update to the Gulp-based template employed to
-              standardize and streamline the rich media creation. The revamped
-              Webpack version, aligned with the latest Node.js, features
-              improved configuration and faster build times, offering a modern
-              foundation for managing additional libraries atop Sataku's
-              JavaScript framework.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">Webpack</li>
-              <li class="stack__item">JavaScript</li>
-              <li class="stack__item">Gulp</li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">Sataku Chrome Injector</h4>
-            <p class="info"><time>2023</time></p>
-            <p>
-              React-based Chrome extension that simplifies assessing rich media
-              by injecting code into the displayed webpage. It features a
-              user-friendly crosshair for selecting insertion points and
-              leverages Sataku's
-              <abbr title="Application Programming Interface">API</abbr> for
-              easy management.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">React</li>
-              <li class="stack__item">TypeScript</li>
-              <li class="stack__item">
-                <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
-              </li>
-              <li class="stack__item">Chrome Extensions</li>
-            </ul>
-          </section>
-          <section>
-            <h4 class="heading-2">
-              <a href="https://kociolekbydgoszcz.pl/">Kociołek</a>
-            </h4>
-            <p class="info"><time>2023</time></p>
-            <div class="videos js-videos">
-              <div class="video-container video-container--desktop">
-                <video
-                  class="video js-video-desktop"
-                  src="videos/kociolek-desktop.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-              <div class="video-container video-container--mobile">
-                <video
-                  class="video js-video-mobile"
-                  src="videos/kociolek-mobile.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-            </div>
-            <p>
-              For this freelance project, I took complete ownership of the
-              design and development process to craft an online presence that
-              resonated with the unique charm of the cafe. I shaped everything
-              from the brand colors and logo to graphics, photos, and appealing
-              fonts.
-            </p>
-            <p>
-              By focusing on performance optimization and responsive web design,
-              I achieved an exceptional Lighthouse score, providing a smooth
-              browsing experience across all devices. Furthermore, implementing
-              best
-              <abbr title="Search Engine Optimization">SEO</abbr> practices
-              significantly boosted the cafe's online visibility.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">Remix</li>
-              <li class="stack__item">React</li>
-              <li class="stack__item">TypeScript</li>
-              <li class="stack__item">
-                <abbr title="Cascading Style Sheets">CSS</abbr>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section id="personal-projects">
-          <h3 class="subheading subheading--alone">Personal projects</h3>
-          <section>
-            <h4 class="heading-2">
-              <a href="https://saitama-personal.netlify.app/"
-                >Previous portfolio</a
-              >
-            </h4>
-            <p class="info"><time>2023</time></p>
-            <div class="videos js-videos">
-              <div class="video-container video-container--desktop">
-                <video
-                  class="video js-video-desktop"
-                  src="videos/previous-portfolio-desktop.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-              <div class="video-container video-container--mobile">
-                <video
-                  class="video js-video-mobile"
-                  src="videos/previous-portfolio-mobile.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-            </div>
-            <p>
-              Prior to this, I developed a stunning portfolio using Astro.
-              Designed entirely from scratch, it featured captivating visuals
-              and a native carousel to showcase my projects.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">Astro</li>
-              <li class="stack__item">JavaScript</li>
-              <li class="stack__item">
-                <abbr title="Cascading Style Sheets">CSS</abbr>
-              </li>
-              <li class="stack__item">
-                <abbr title="HyperText Markup Language">HTML</abbr>
-              </li>
-            </ul>
-            <p>
-              <a href="https://github.com/saitamason/personal-astro"
-                >Previous portfolio on GitHub</a
-              >
-            </p>
-          </section>
-          <section>
-            <h4 class="heading-2">
-              <a href="https://saitama-natio.netlify.app/">Natio</a>
-            </h4>
-            <p class="info"><time>2023</time></p>
-            <div class="videos js-videos">
-              <div class="video-container video-container--desktop">
-                <video
-                  class="video js-video-desktop"
-                  src="videos/natio-desktop.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-              <div class="video-container video-container--mobile">
-                <video
-                  class="video js-video-mobile"
-                  src="videos/natio-mobile.mp4"
-                  loop
-                  muted
-                  controls
-                  preload="metadata"
-                  playsinline
-                ></video>
-              </div>
-            </div>
-            <p>
-              Single-page application designed from scratch that explores
-              countries and their neighbors, saves favorites, and tracks
-              discovery progress. It follows the
-              <abbr title="Model-View-Controller">MVC</abbr> architecture, pulls
-              data from the
-              <abbr title="Representational State Transfer">REST</abbr>
-              Countries
-              <abbr title="Application Programming Interface">API</abbr>, and
-              features a responsive design. The background changes dynamically
-              based on each country's flag, and a custom search makes finding
-              countries easy.
-            </p>
-            <ul class="stack">
-              <li class="stack__item">JavaScript</li>
-              <li class="stack__item">
-                <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
-              </li>
-              <li class="stack__item">
-                <abbr title="HyperText Markup Language">HTML</abbr>
-              </li>
-            </ul>
-            <p>
-              <a href="https://github.com/saitamason/natio">Natio on GitHub</a>
-            </p>
-          </section>
+              <p>
+                As the lead developer, I prioritize sustainable code
+                architecture to ensure long-term efficiency in our development
+                process. The code has excellent test coverage and is maintained
+                as a privately distributed npm package with a clean changelog
+                and well-structured release formats.
+              </p>
+              <ul class="stack">
+                <li class="stack__item">Node.js</li>
+                <li class="stack__item">JavaScript</li>
+                <li class="stack__item">Jest</li>
+                <li class="stack__item">ExtendScript</li>
+                <li class="stack__item">Photoshop</li>
+              </ul>
+            </section>
+            <section>
+              <h4 class="heading-2">Sataku Webpack Template</h4>
+              <p class="info"><time>2023</time>–present</p>
+              <p>
+                An essential update to the Gulp-based template employed to
+                standardize and streamline the rich media creation. The revamped
+                Webpack version, aligned with the latest Node.js, features
+                improved configuration and faster build times, offering a modern
+                foundation for managing additional libraries atop Sataku's
+                JavaScript framework.
+              </p>
+              <ul class="stack">
+                <li class="stack__item">Webpack</li>
+                <li class="stack__item">JavaScript</li>
+                <li class="stack__item">Gulp</li>
+              </ul>
+            </section>
+            <section>
+              <h4 class="heading-2">Sataku Chrome Injector</h4>
+              <p class="info"><time>2023</time></p>
+              <p>
+                React-based Chrome extension that simplifies assessing rich
+                media by injecting code into the displayed webpage. It features
+                a user-friendly crosshair for selecting insertion points and
+                leverages Sataku's
+                <abbr title="Application Programming Interface">API</abbr> for
+                easy management.
+              </p>
+              <ul class="stack">
+                <li class="stack__item">React</li>
+                <li class="stack__item">TypeScript</li>
+                <li class="stack__item">
+                  <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
+                </li>
+                <li class="stack__item">Chrome Extensions</li>
+              </ul>
+            </section>
+          </div>
         </section>
       </section>
-      <section id="experience">
+      <section id="experience" class="container">
         <h2 class="heading-1">
           <span class="heading-1__number">04</span>
           <span>Experience</span>
@@ -784,7 +472,7 @@
           </p>
         </section>
       </section>
-      <section id="certificates">
+      <section id="certificates" class="container">
         <h2 class="heading-1">
           <span class="heading-1__number">05</span>
           <span>Certificates</span>
@@ -964,7 +652,7 @@
           </li>
         </ul>
       </section>
-      <section id="education">
+      <section id="education" class="container">
         <h2 class="heading-1">
           <span class="heading-1__number">06</span>
           <span>Education</span>
@@ -1032,7 +720,7 @@
         </section>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <p>
         Reviewed on
         <time datetime="2024-06-01">June 1, 2024</time>.
