@@ -1,4 +1,4 @@
-import attachVideoPlayButtons from "./attachVideoPlayButtons.js";
+import attachVideoPlayButtons from "/scripts/attachVideoPlayButtons.js";
 
 export default function observeVideos() {
   const desktopVideos = document.querySelectorAll(".js-video-desktop");
