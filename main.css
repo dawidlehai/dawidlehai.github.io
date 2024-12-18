@@ -201,16 +201,18 @@ ul {
 }
 
 .details__summary {
-  display: inline-flex;
   float: right;
-  gap: 0.5em;
   cursor: pointer;
+}
+
+.details__summary::marker {
+  content: "";
 }
 
 .details__summary::before {
   transition-duration: var(--duration-short), var(--duration-long);
   transition-property: transform, color;
-  content: "+";
+  content: "+ ";
   color: var(--color-primary-dark);
 }
 
@@ -500,16 +502,11 @@ ul {
 @media (scripting: enabled) {
   .video-play-button {
     all: unset;
-    grid-row: 1;
-    grid-column: 1;
-    align-self: end;
-    justify-self: start;
-    backdrop-filter: blur(var(--blur));
-    cursor: pointer;
-    margin-inline: var(--space-inline);
-    background-color: var(--color-video-play-button);
-    padding-inline: var(--padding-inline);
-    padding-block: var(--padding-block);
+  }
+
+  .video-play-button--hidden {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -548,4 +545,34 @@ ul {
 .footer {
   text-wrap: balance;
   margin-block-start: var(--space-m-5);
+}
+
+/* ------------------------------------
+   Button
+   ------------------------------------
+   Keep at the end to override video
+   play button 'unset' style.
+   --------------------------------- */
+
+.button {
+  transition-duration: var(--duration-long);
+  transition-property: text-decoration-color;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--color-visited-opaque);
+  text-decoration-thickness: 0.2em;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transition-duration: var(--duration-short);
+    text-decoration-color: currentColor;
+  }
+}
+
+.button:focus-visible {
+  transition-duration: var(--duration-short);
+  text-decoration-color: transparent;
 }

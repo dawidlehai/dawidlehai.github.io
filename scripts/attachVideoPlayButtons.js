@@ -1,28 +1,25 @@
 export default function attachVideoPlayButtons() {
   const playText = "Play";
-  const pauseText = "Pause";
-  const buttonClass = "video-play-button";
-  const videoContainers = document.querySelectorAll(".js-videos");
+  const buttonClasses = "video-play-button button js-video-play-button";
+  const buttonHiddenClass = "video-play-button--hidden";
+  const projectContainers = document.querySelectorAll(".js-project");
 
-  videoContainers.forEach(function attachPlayButton(container) {
+  projectContainers.forEach(function attachPlayButton(container) {
+    const buttonIsPresent = container.querySelector(".js-video-play-button");
+    if (buttonIsPresent) return;
+
     const desktopVideo = container.querySelector(".js-video-desktop");
     const mobileVideo = container.querySelector(".js-video-mobile");
 
     if (desktopVideo && mobileVideo) {
       const button = document.createElement("button");
-      button.classList.add(buttonClass);
+      button.classList = buttonClasses;
       button.innerText = playText;
 
       function handleVideoButtonClick() {
-        if (desktopVideo.paused) {
-          desktopVideo.play();
-          mobileVideo.play();
-          button.innerText = pauseText;
-        } else {
-          desktopVideo.pause();
-          mobileVideo.pause();
-          button.innerText = playText;
-        }
+        desktopVideo.play();
+        mobileVideo.play();
+        button.classList.add(buttonHiddenClass);
       }
 
       button.addEventListener("click", handleVideoButtonClick);
