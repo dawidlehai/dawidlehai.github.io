@@ -497,25 +497,29 @@ ul {
   text-wrap: balance;
 }
 
-.certificates__details[open] > .certificates__summary {
+/* ------------------------------------
+   Details
+   --------------------------------- */
+
+.details[open] > .details__summary {
   display: none;
 }
 
-.certificates__summary {
+.details__summary {
   display: inline-flex;
   float: right;
   gap: 0.5em;
   cursor: pointer;
 }
 
-.certificates__summary::before {
+.details__summary::before {
   transition-duration: var(--duration-short), var(--duration-long);
   transition-property: transform, color;
   content: "+";
   color: var(--color-primary-dark);
 }
 
-.certificates__more-button {
+.details__more-button {
   transition-duration: var(--duration-long);
   transition-property: text-decoration-color;
   text-decoration: underline;
@@ -526,23 +530,23 @@ ul {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .certificates__summary:hover > .certificates__more-button {
+  .details__summary:hover > .details__more-button {
     transition-duration: var(--duration-short);
     text-decoration-color: currentColor;
   }
 
-  .certificates__summary:hover::before {
+  .details__summary:hover::before {
     transition-duration: var(--duration-short);
     color: var(--color-text);
   }
 }
 
-.certificates__more-button:focus-visible {
+.details__more-button:focus-visible {
   transition-duration: var(--duration-short);
   text-decoration-color: transparent;
 }
 
-.certificates__summary:focus-visible::before {
+.details__summary:focus-visible::before {
   transition-duration: var(--duration-short);
   color: var(--color-text);
 }
