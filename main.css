@@ -1,3 +1,7 @@
+@view-transition {
+  navigation: auto;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 100 900;
@@ -55,7 +59,8 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  /* Do not use 'scroll-behavior: smooth' for 
+     better transitions between pages. */
   font-size: calc(100% + 0.25vw);
 }
 
@@ -468,6 +473,10 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   margin-inline: calc(var(--space-inline) * -1);
+}
+
+.videos--active {
+  view-transition-name: active-videos;
 }
 
 @media (width > 36em /* 576px */) {
