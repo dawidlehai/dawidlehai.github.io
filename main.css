@@ -59,8 +59,10 @@
 
 html {
   box-sizing: border-box;
-  /* Do not use 'scroll-behavior: smooth' for 
-     better transitions between pages. */
+  /* Do not place 'scroll-behavior: smooth'
+     in CSS style sheets. This is handled from
+     within JavaScript in 'modifyAnchorClickHandler'
+     function for better transitions between pages. */
   font-size: calc(100% + 0.25vw);
 }
 

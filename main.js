@@ -1,5 +1,5 @@
 import observeVideos from "/scripts/observeVideos.js";
-import addBackNavigationHandlers from "/scripts/addBackNavigationHandlers.js";
+import modifyAnchorClickHandler from "/scripts/modifyAnchorClickHandler.js";
 
 observeVideos();
-addBackNavigationHandlers(".js-back-button");
+document.addEventListener("click", modifyAnchorClickHandler);
