@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/main.css" rel="stylesheet" />
+    <script src="/main.js" type="module"></script>
+    <link href="/favicon.svg" rel="icon" />
+    <title>Dawid Le Hai, Front-End Developer</title>
+    <meta
+      name="description"
+      content="Are you looking for a skilled front-end developer with a few years of professional experience? Check out my website and learn more about me."
+    />
+  </head>
+  <body>
+    <nav class="container" aria-label="Back to previous page navigation">
+      <p>
+        <a href="/" class="js-back-button">← Go back</a>
+      </p>
+    </nav>
+    <main class="container">
+      <h1 class="heading-2">Natio</h1>
+      <p class="info"><time>2023</time></p>
+      <div class="videos videos--natio js-videos">
+        <div class="video-container video-container--desktop">
+          <video
+            class="video js-video-desktop"
+            src="/videos/natio-desktop.mp4"
+            loop
+            muted
+            controls
+            preload="metadata"
+            playsinline
+          ></video>
+        </div>
+        <div class="video-container video-container--mobile">
+          <video
+            class="video js-video-mobile"
+            src="/videos/natio-mobile.mp4"
+            loop
+            muted
+            controls
+            preload="metadata"
+            playsinline
+          ></video>
+        </div>
+      </div>
+      <p>
+        Single-page application designed from scratch that explores countries
+        and their neighbors, saves favorites, and tracks discovery progress. It
+        follows the
+        <abbr title="Model-View-Controller">MVC</abbr> architecture, pulls data
+        from the
+        <abbr title="Representational State Transfer">REST</abbr>
+        Countries
+        <abbr title="Application Programming Interface">API</abbr>, and features
+        a responsive design. The background changes dynamically based on each
+        country's flag, and a custom search makes finding countries easy.
+      </p>
+      <ul class="stack">
+        <li class="stack__item">JavaScript</li>
+        <li class="stack__item">
+          <abbr title="Syntactically Awesome StyleSheets">Sass</abbr>
+        </li>
+        <li class="stack__item">
+          <abbr title="HyperText Markup Language">HTML</abbr>
+        </li>
+      </ul>
+      <p class="links">
+        <a href="https://saitama-natio.netlify.app/">Natio on Netlify</a
+        ><a href="https://github.com/saitamason/natio">Natio on GitHub</a>
+      </p>
+    </main>
+    <nav class="container footer" aria-label="Back to previous page navigation">
+      <p>
+        <a href="/" class="js-back-button">← Go back</a>
+      </p>
+    </nav>
+  </body>
+</html>
