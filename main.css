@@ -475,8 +475,28 @@ ul {
   margin-inline: calc(var(--space-inline) * -1);
 }
 
-.videos--active {
-  view-transition-name: active-videos;
+.videos--oohattention {
+  view-transition-name: oohattention-videos;
+}
+
+.videos--sarigato {
+  view-transition-name: sarigato-videos;
+}
+
+.videos--carlazuri {
+  view-transition-name: carlazuri-videos;
+}
+
+.videos--richmedia {
+  view-transition-name: richmedia-videos;
+}
+
+.videos--kociolek {
+  view-transition-name: kociolek-videos;
+}
+
+.videos--natio {
+  view-transition-name: natio-videos;
 }
 
 @media (width > 36em /* 576px */) {
