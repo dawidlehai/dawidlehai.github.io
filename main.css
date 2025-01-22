@@ -210,54 +210,70 @@ ul {
    Details
    --------------------------------- */
 
-.details[open] > .details__summary {
-  display: none;
+.details[open] {
+  margin-block-end: var(--space-m-1);
 }
 
 .details__summary {
-  float: right;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-d-2);
   cursor: pointer;
+  margin-block: calc(var(--space-m-1) / 2);
+  font-size: 1.35rem;
 }
 
-.details__summary::marker {
-  content: "";
-}
-
-.details__summary::before {
+.details__summary::after {
+  display: flex;
+  align-items: center;
   transition-duration: var(--duration-short), var(--duration-long);
   transition-property: transform, color;
-  content: "+ ";
+  content: "+";
   color: var(--color-primary-dark);
+  font-weight: 300;
+  line-height: 1;
 }
 
-.details__more-button {
+.details[open] > .details__summary::after {
+  transform: rotate(-45deg);
+}
+
+.details__heading {
   transition-duration: var(--duration-long);
   transition-property: text-decoration-color;
+  margin-block: 0;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.4;
   text-decoration: underline;
   text-decoration-color: var(--color-visited-opaque);
   text-decoration-thickness: 0.2em;
   text-decoration-skip-ink: none;
   text-underline-offset: 0.2em;
+  text-wrap: balance;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .details__summary:hover > .details__more-button {
+  .details__summary:hover > .details__heading {
     transition-duration: var(--duration-short);
     text-decoration-color: currentColor;
   }
 
-  .details__summary:hover::before {
+  .details__summary:hover::after {
     transition-duration: var(--duration-short);
     color: var(--color-text);
   }
 }
 
-.details__more-button:focus-visible {
+/* The order of `:focus-visible` selectors after
+     `:hover` selectors is not accidental. */
+
+.details__summary:focus-visible > .details__heading {
   transition-duration: var(--duration-short);
   text-decoration-color: transparent;
 }
 
-.details__summary:focus-visible::before {
+.details__summary:focus-visible::after {
   transition-duration: var(--duration-short);
   color: var(--color-text);
 }
@@ -349,6 +365,10 @@ ul {
   text-wrap: balance;
 }
 
+.heading-2--space-bottom {
+  margin-block-end: var(--space-m-1);
+}
+
 .heading-3 {
   margin-block-start: var(--space-m-3);
   margin-block-end: var(--space-block);
@@ -361,49 +381,6 @@ ul {
 /* ------------------------------------
    Skills
    --------------------------------- */
-
-.skill__details[open] {
-  margin-block-end: var(--space-m-1);
-}
-
-.skill__summary {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-d-2);
-  cursor: pointer;
-  margin-block: calc(var(--space-m-1) / 2);
-  font-size: 1.35rem;
-}
-
-.skill__summary::after {
-  display: flex;
-  align-items: center;
-  transition-duration: var(--duration-short), var(--duration-long);
-  transition-property: transform, color;
-  content: "+";
-  color: var(--color-primary-dark);
-  font-weight: 300;
-  line-height: 1;
-}
-
-.skill__details[open] > .skill__summary::after {
-  transform: rotate(-45deg);
-}
-
-.skill__heading {
-  transition-duration: var(--duration-long);
-  transition-property: text-decoration-color;
-  margin-block: 0;
-  font-weight: 500;
-  font-size: inherit;
-  line-height: 1.4;
-  text-decoration: underline;
-  text-decoration-color: var(--color-visited-opaque);
-  text-decoration-thickness: 0.2em;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 0.2em;
-  text-wrap: balance;
-}
 
 .skill__experience-item {
   margin-inline-start: var(--space-inline);
@@ -418,31 +395,6 @@ ul {
 .skill__experience-item > a {
   color: currentColor;
   text-decoration: 0;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .skill__summary:hover > .skill__heading {
-    transition-duration: var(--duration-short);
-    text-decoration-color: currentColor;
-  }
-
-  .skill__summary:hover::after {
-    transition-duration: var(--duration-short);
-    color: var(--color-text);
-  }
-}
-
-/* The order of `:focus-visible` selectors after
-   `:hover` selectors is not accidental. */
-
-.skill__summary:focus-visible > .skill__heading {
-  transition-duration: var(--duration-short);
-  text-decoration-color: transparent;
-}
-
-.skill__summary:focus-visible::after {
-  transition-duration: var(--duration-short);
-  color: var(--color-text);
 }
 
 /* ------------------------------------
@@ -571,6 +523,58 @@ ul {
 /* ------------------------------------
    Certificates
    --------------------------------- */
+
+.certificates__details[open] > .certificates__summary {
+  display: none;
+}
+
+.certificates__summary {
+  float: right;
+  cursor: pointer;
+}
+
+.certificates__summary::marker {
+  content: "";
+}
+
+.certificates__summary::before {
+  transition-duration: var(--duration-short), var(--duration-long);
+  transition-property: transform, color;
+  content: "+ ";
+  color: var(--color-primary-dark);
+}
+
+.certificates__more-button {
+  transition-duration: var(--duration-long);
+  transition-property: text-decoration-color;
+  text-decoration: underline;
+  text-decoration-color: var(--color-visited-opaque);
+  text-decoration-thickness: 0.2em;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .certificates__summary:hover > .certificates__more-button {
+    transition-duration: var(--duration-short);
+    text-decoration-color: currentColor;
+  }
+
+  .certificates__summary:hover::before {
+    transition-duration: var(--duration-short);
+    color: var(--color-text);
+  }
+}
+
+.certificates__more-button:focus-visible {
+  transition-duration: var(--duration-short);
+  text-decoration-color: transparent;
+}
+
+.certificates__summary:focus-visible::before {
+  transition-duration: var(--duration-short);
+  color: var(--color-text);
+}
 
 .certificates__item {
   text-wrap: balance;
