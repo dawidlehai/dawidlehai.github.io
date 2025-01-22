@@ -494,6 +494,13 @@ ul {
     all: unset;
   }
 
+  /* Select by js-* class as this only
+     applies to JavaScript-enabled browsers
+     and is highly linked with JS logic. */
+  .js-project:not(:has(.video-container--mobile)) .video-play-button {
+    margin-block-start: var(--space-block);
+  }
+
   .video-play-button--hidden {
     opacity: 0;
     pointer-events: none;
