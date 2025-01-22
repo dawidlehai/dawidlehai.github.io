@@ -1,5 +1,9 @@
 import attachVideoPlayButtons from "/scripts/attachVideoPlayButtons.js";
 
+/**
+ * Videos are played with JS because it is the only way to lazy load them with
+ * preload="metadata". If videos had autoplay, they would be downloaded immediately.
+ */
 export default function observeVideos() {
   const desktopVideos = document.querySelectorAll(".js-video-desktop");
   const videosMap = new Map();
@@ -18,7 +22,7 @@ export default function observeVideos() {
       if (entry.isIntersecting) {
         try {
           await desktopVideo.play();
-          await mobileVideo.play();
+          await mobileVideo?.play();
         } catch {
           videosMap.forEach((_, videoDesktop) => {
             videoObserver.unobserve(videoDesktop);
@@ -27,7 +31,7 @@ export default function observeVideos() {
         }
       } else {
         desktopVideo.pause();
-        mobileVideo.pause();
+        mobileVideo?.pause();
       }
     });
   }, videoObserverOptions);
@@ -40,7 +44,11 @@ export default function observeVideos() {
     videosMap.set(desktopVideo, mobileVideo);
     videoObserver.observe(desktopVideo);
 
+    /**
+     * Controls attribute is added to the video elements as a fallback,
+     * in case the user has disabled JavaScript or the Intersection Observer API.
+     */
     desktopVideo.controls = false;
-    mobileVideo.controls = false;
+    if (mobileVideo) mobileVideo.controls = false;
   });
 }
