@@ -27,7 +27,13 @@ export default function attachVideoPlayButtons() {
       }
 
       button.addEventListener("click", handleVideoButtonClick);
-      container.appendChild(button);
+
+      let videosContainer = container.querySelector(".js-videos");
+      if (videosContainer.parentElement instanceof HTMLAnchorElement) {
+        videosContainer = videosContainer.parentElement;
+      }
+
+      videosContainer.insertAdjacentElement("afterend", button);
     }
   });
 }
