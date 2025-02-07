@@ -489,6 +489,11 @@ ul {
   inline-size: 100%;
 }
 
+.video--aspect-ratio {
+  aspect-ratio: 624 / 306;
+  object-fit: cover;
+}
+
 @media (scripting: enabled) {
   .video-play-button {
     all: unset;
