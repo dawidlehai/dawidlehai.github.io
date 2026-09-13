@@ -45,11 +45,11 @@
   --space-d-3: calc(var(--space-block) / 3);
 
   --space-m-1: calc(var(--space-block) * 1.5);
-  --space-m-2: calc(var(--space-block) * 2);
-  --space-m-3: calc(var(--space-block) * 3);
-  --space-m-4: calc(var(--space-block) * 4);
-  --space-m-5: calc(var(--space-block) * 5);
-  --space-m-6: calc(var(--space-block) * 6);
+  --space-m-2: calc(var(--space-block) * 1.4);
+  --space-m-3: calc(var(--space-block) * 2);
+  --space-m-4: calc(var(--space-block) * 2.8);
+  --space-m-5: calc(var(--space-block) * 3.5);
+  --space-m-6: calc(var(--space-block) * 4.2);
 
   --duration-short: 0.15s;
   --duration-long: 0.5s;
